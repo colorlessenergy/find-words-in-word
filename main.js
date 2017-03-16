@@ -1,21 +1,23 @@
-console.log(words);
-alert(words);
-var userInput = prompt("what is the word you want to break down!");
 var completeWord = [];
-while (userInput.length > 0) {
-  var matchingElement = words.filter(function (e) {
-    return userInput.toLowerCase().startsWith(e);
-  });
-  var match = matchingElement.sort(function (e) {
-    return e;
-  })[1];
-  console.log(match);
-  if (match) {
-    completeWord.push(match)
-    userInput = userInput.slice(match.length)
-  } else {
-    completeWord.push(userInput[0]);
-    userInput = userInput.slice(1);
+var userData;
+var data = document.getElementById("data");
+var send = document.getElementById("send");
+var displayWord = document.getElementById("displayWord");
+send.addEventListener("click", function () {
+  userData = data.value
+  while (userData.length > 0) {
+    var matchingElement = words.filter(function (e) {
+      return userData.toLowerCase().startsWith(e);
+    });
+    if (matchingElement[1]) {
+      completeWord.push(matchingElement[1]);
+      userData = userData.slice(matchingElement[1].length);
+    } else {
+      completeWord.push(userData[0]);
+      userData = userData.slice(1);
+    }
+    displayWord.innerHTML = completeWord.join(" - ")
   }
-  console.log(completeWord);
-}
+  completeWord = [];
+  data.value = "";
+});

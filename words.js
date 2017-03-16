@@ -1,5 +1,4 @@
 var words;
-
 function readTextFile(file) {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
