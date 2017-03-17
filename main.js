@@ -21,3 +21,9 @@ send.addEventListener("click", function () {
   completeWord = [];
   data.value = "";
 });
+
+data.addEventListener("keyup", function (e) {
+  if (e.keyCode === 13) {
+    send.click();
+  }
+});

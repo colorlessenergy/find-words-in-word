@@ -1,0 +1,39 @@
+body, html {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #dd0fb4;
+  text-align: center;
+}
+
+header p, .display p,  .data p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.data, .display {
+  background-color: #910b8c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.display {
+  background-color: #89056d;
+}

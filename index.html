@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Gidugu" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <p>insert word you want to break down into smaller words!</p>
-  <input id="data" type="text">
-  <button id="send">send</button>
-  <p id="displayWord"></p>
+  <header>
+    <p>word conjunctions!</p>
+  </header>
+  <section class="data">
+    <p>insert word you want to break down into smaller words!</p>
+    <div>
+      <input id="data" type="text">
+      <button id="send">send</button>
+    </div>
+  </section>
+  <div class="display">
+    <p>Broken-down word:</p>
+    <p id="displayWord"></p>
+  </div>
+  <footer><a href="https://github.com/colorlessenergy">colorlessenergy</a></footer>
   <script src="words.js"></script>
   <script src="main.js"></script>
 </body>
